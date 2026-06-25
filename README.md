@@ -1,14 +1,8 @@
 \# FlowChain
 
-
-
 FlowChain is a blockchain-based trust and reputation management framework for Software Defined Networks (SDN).
 
-
-
 \## Features
-
-
 
 \- Node Registration
 
@@ -24,11 +18,7 @@ FlowChain is a blockchain-based trust and reputation management framework for So
 
 \- Real-Time Dashboard
 
-
-
 \## Tech Stack
-
-
 
 \- Solidity
 
@@ -46,11 +36,7 @@ FlowChain is a blockchain-based trust and reputation management framework for So
 
 \- Mininet
 
-
-
 \## Running Backend
-
-
 
 ```bash
 
@@ -62,3 +48,4 @@ npm start
 Running Hardhat
 npx hardhat node
 
+```
