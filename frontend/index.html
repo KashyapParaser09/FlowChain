@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowChain Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="topbar">
+        <div>
+          <h1>FlowChain</h1>
+          <p>Blockchain Trust & Audit Framework for SDN</p>
+        </div>
+
+        <button id="refreshBtn">Refresh Data</button>
+      </header>
+
+      <!-- Overview -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Nodes</h3>
+          <span id="totalNodes">0</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>Trusted Nodes</h3>
+          <span id="trustedNodes">0</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>Untrusted Nodes</h3>
+          <span id="untrustedNodes">0</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>Total Events</h3>
+          <span id="totalEvents">0</span>
+        </div>
+      </section>
+
+      <!-- Node List -->
+      <section class="card">
+        <div class="section-header">
+          <h2>Network Nodes</h2>
+
+          <input type="text" id="searchNode" placeholder="Search Node ID..." />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Node ID</th>
+              <th>Reputation</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="nodeTable"></tbody>
+        </table>
+      </section>
+
+      <!-- Audit Logs -->
+      <section class="card">
+        <div class="section-header">
+          <h2>Blockchain Audit Logs</h2>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Block</th>
+              <th>Event</th>
+              <th>Node</th>
+              <th>Old Rep</th>
+              <th>New Rep</th>
+              <th>Tx Hash</th>
+            </tr>
+          </thead>
+
+          <tbody id="auditTable"></tbody>
+        </table>
+      </section>
+
+      <!-- Loading State -->
+      <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+        <p>Loading blockchain data...</p>
+      </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
